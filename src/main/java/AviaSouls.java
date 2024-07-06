@@ -35,7 +35,7 @@ public class AviaSouls {
         return result;
     }
 
-    public Ticket[] searchAndSortBy(String from, String to){
+    public Ticket[] searchAndSortBy(String from, String to) {
         TicketTimeComparator searchTimeComparator = new TicketTimeComparator();
         Ticket[] result = new Ticket[0]; // массив для ответа
         for (Ticket ticket : tickets) { // перебираем все билеты

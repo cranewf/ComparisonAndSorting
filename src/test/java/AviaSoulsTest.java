@@ -9,11 +9,11 @@ class AviaSoulsTest {
 
     Ticket t1 = new Ticket("Домодедово", "Нижний Новгород", 5_000, 14, 21);
     Ticket t2 = new Ticket("Внуково", "Казань", 7_500, 11, 16);
-    Ticket t3 = new Ticket("Казань", "Санкт-Петербург", 8_200,10, 16);
+    Ticket t3 = new Ticket("Казань", "Санкт-Петербург", 8_200, 10, 16);
     Ticket t4 = new Ticket("Санкт-Петербург", "Внуково", 7_500, 15, 23);
 
     @Test
-    public void addTickets(){
+    public void addTickets() {
         AviaSouls add = new AviaSouls();
 
         add.add(t1);
@@ -29,7 +29,7 @@ class AviaSoulsTest {
     }
 
     @Test
-    public void searchTickets(){
+    public void searchTickets() {
         AviaSouls search = new AviaSouls();
 
         search.add(t1);
@@ -48,7 +48,7 @@ class AviaSoulsTest {
     }
 
     @Test
-    public void searchNoneTickets(){
+    public void searchNoneTickets() {
         AviaSouls searchNone = new AviaSouls();
 
         searchNone.add(t1);
@@ -64,7 +64,7 @@ class AviaSoulsTest {
 
 
     @Test
-    public void sortByPrice(){
+    public void sortByPrice() {
         AviaSouls sorts = new AviaSouls();
 
         sorts.add(t1);
@@ -77,11 +77,11 @@ class AviaSoulsTest {
         Ticket[] expected = {t1, t2, t4, t3};
         Arrays.sort(tickets);
 
-        Assertions.assertArrayEquals(expected,tickets);
+        Assertions.assertArrayEquals(expected, tickets);
     }
 
     @Test
-    public void searchWithComparator(){
+    public void searchWithComparator() {
         AviaSouls searchComparator = new AviaSouls();
 
         searchComparator.add(t1);
@@ -90,7 +90,7 @@ class AviaSoulsTest {
         searchComparator.add(t4);
 
         Ticket[] actual1 = searchComparator.searchAndSortBy("Внуково", "Казань");
-        Ticket[] actual2 = searchComparator.searchAndSortBy("Казань", "Санкт-Петербург" );
+        Ticket[] actual2 = searchComparator.searchAndSortBy("Казань", "Санкт-Петербург");
         Ticket[] actual3 = searchComparator.searchAndSortBy("Домодедово", "Нижний Новгород");
         Ticket[] actual4 = searchComparator.searchAndSortBy("Санкт-Петербург", "Внуково");
 
