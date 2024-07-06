@@ -117,7 +117,7 @@ class AviaSoulsTest {
     }
 
     @Test
-    public void sortAllTicketWithComparator(){
+    public void sortAllTicketWithComparator() {
         TicketTimeComparator sorts = new TicketTimeComparator();
         AviaSouls sortTicket = new AviaSouls();
 
